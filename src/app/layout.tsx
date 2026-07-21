@@ -16,9 +16,25 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rafael-holos.neomac.io"),
   title: "Rafael Álvarez · Sonoterapia & Baños de Gong — Casa Holos",
   description:
     "Neurosonicidad, cuencos tibetanos y baños de gong para plenitud, bienestar y prosperidad. Sesiones dirigidas por Rafael Cristóbal Álvarez en Casa Holos.",
+  openGraph: {
+    title: "Rafael Álvarez · Sonoterapia & Baños de Gong — Casa Holos",
+    description:
+      "Neurosonicidad, cuencos tibetanos y baños de gong para plenitud, bienestar y prosperidad. Sesiones dirigidas por Rafael Cristóbal Álvarez en Casa Holos.",
+    url: "https://rafael-holos.neomac.io",
+    siteName: "Casa Holos",
+    locale: "es_DO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rafael Álvarez · Sonoterapia & Baños de Gong — Casa Holos",
+    description:
+      "Neurosonicidad, cuencos tibetanos y baños de gong para plenitud, bienestar y prosperidad.",
+  },
 };
 
 export default function RootLayout({
