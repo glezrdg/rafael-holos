@@ -1,0 +1,66 @@
+{
+  "profile": {
+    "username": "rafael_holos",
+    "fullName": "Rafael Holos",
+    "bio": "1,547 Followers, 3,770 Following, 1,159 Posts",
+    "avatar": "/images/instagram/avatar.jpg"
+  },
+  "posts": [
+    {
+      "id": "post_001",
+      "shortcode": "synthetic_000",
+      "caption": "rafael_holos's profile picture",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_001.jpg"
+    },
+    {
+      "id": "post_002",
+      "shortcode": "synthetic_001",
+      "caption": "",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_002.jpg"
+    },
+    {
+      "id": "post_003",
+      "shortcode": "synthetic_002",
+      "caption": "",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_003.jpg"
+    },
+    {
+      "id": "post_004",
+      "shortcode": "synthetic_003",
+      "caption": "",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_004.jpg"
+    },
+    {
+      "id": "post_005",
+      "shortcode": "synthetic_004",
+      "caption": "",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_005.jpg"
+    },
+    {
+      "id": "post_006",
+      "shortcode": "synthetic_005",
+      "caption": "Disfrutando en la naturaleza  comparto  con tigo este momento,permite  que la vibracion de estos sonidos abran  puertas de transformación .#cuencostibetanos #Vickrampal #meditación #wellness #yoga @iits_gong",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_006.jpg"
+    },
+    {
+      "id": "post_007",
+      "shortcode": "synthetic_006",
+      "caption": "",
+      "date": "",
+      "type": "image",
+      "media": "/images/instagram/post_007.jpg"
+    }
+  ]
+}

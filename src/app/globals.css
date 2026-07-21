@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0a08;
+  --bg-2: #14110d;
+  --sand: #d9c9a3;
+  --sand-2: #b89f6f;
+  --gold: #c9a24a;
+  --ink: #f4ecd8;
+  --ink-mute: #a89985;
+  --moss: #2b3a2a;
+  --clay: #7a3b28;
+  --lotus: #d19cbb;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-sand: var(--sand);
+  --color-gold: var(--gold);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+/* Prevent iOS text auto-zoom on inputs */
+@media (max-width: 640px) {
+  input, select, textarea, button { font-size: 16px; }
+}
+
+.font-serif { font-family: var(--font-serif), Georgia, serif; }
+.font-sans { font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; }
+
+/* Zen ambient grain */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+/* Sound wave animation ring */
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.5; }
+  80%, 100% { transform: scale(2.4); opacity: 0; }
+}
+.ring-pulse {
+  animation: ping-slow 4.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Aurora-like moving blob */
+@keyframes drift {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(6%, -3%) scale(1.08); }
+}
+.blob {
+  animation: drift 18s ease-in-out infinite;
+  filter: blur(80px);
+}
+
+/* Slow spinning enso */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow { animation: spin-slow 60s linear infinite; }
+
+/* Marquee for om chant strip */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+/* Scroll reveal helper */
+.fade-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+}
+
+/* Reset default focus for buttons */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--gold);
+  color: #14110d;
+}
