@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    container_name: rafael-holos
+    restart: unless-stopped
+    networks:
+      - web
+    mem_limit: 1g
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.rafael-holos.rule=Host(`rafael-holos.neomac.io`)"
+      - "traefik.http.routers.rafael-holos.entrypoints=websecure"
+      - "traefik.http.routers.rafael-holos.tls=true"
+      - "traefik.http.routers.rafael-holos.tls.certresolver=cf-dns"
+      - "traefik.http.services.rafael-holos.loadbalancer.server.port=3000"
+
+networks:
+  web:
+    external: true
